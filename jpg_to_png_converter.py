@@ -22,7 +22,7 @@ if not os.path.exists(output):
 
 files = os.listdir(source)
 
-jpg_files = filter(lambda file: os.path.splitext(file)[1] == '.jpg', files)
+jpg_files = filter(lambda file: os.path.splitext(file)[1].lower() == '.jpg', files)
 
 for file in jpg_files:
     print(f'Converting {file} to PNG format...')
