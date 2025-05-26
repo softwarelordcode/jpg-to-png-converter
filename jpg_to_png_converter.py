@@ -20,6 +20,13 @@ if not os.path.exists(source):
 if not os.path.exists(output):
     os.makedirs(output)
 
+files = os.listdir(source)
+
+jpg_files = filter(lambda file: os.path.splitext(file)[1] == '.jpg', files)
+
+for file in jpg_files:
+    print(f'Converting {file} to PNG format...')
+
 # loop through Pokedex,
 # convert images to png
 # save to the new
